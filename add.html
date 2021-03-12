@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuova lezione - PoliReplay</title>
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+            name="description"
+            content="Guarda e aggiungi tutte le lezioni registrate del Politecnico di Milano"
+    />
+    <link rel="manifest" href="./assets/manifest.json" />
+    <meta property="og:type'" content="website">
+    <meta property="og:url'" content="www.polireplay.it/add">
+    <meta property="og:title'" content="Aggiungi una nuova lezione - PoliReplay">
+    <meta property="og:image'" content="https://polireplay.it/static/media/logo.f3108e60.png">
+    <meta property="og:description'" content="Cerca, filtra e riguarda le lezioni online del Politecnico di Milano. Semplice, gratuito e veloce.">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/add.js"></script>
+    <script src="scripts/global.js"></script>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/add.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/cookiesalert.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script>
+        function onCheck() {
+            $("#corso2-sel").select2();
+            let checker = document.getElementById('checker');
+            if (checker.checked)
+                $('#corso2-sel').prop("disabled", false);
+            else
+                $('#corso2-sel').prop("disabled", true);
+        }
+    </script>
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="NavBar">
+        <div class="logo">
+            <a href="https://www.polireplay.it">
+                <img src="./assets/images/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <!--<a title="PoliReplay Blog" class="purple-blog-btn" href="https://polireplay.it/blog"><p>BLOG</p></a>-->
+                <a title="Login" id="login" class="purple-blog-btn" href="https://polireplay.it/login"><p>LOGIN</p></a>
+                <a title="Profilo" id="history" class="purple-blog-btn" href="https://polireplay.it/profile.php"><p>PROFILO</p></a>
+                <script>
+                    if(document.cookie.includes('PRAC') && document.cookie.includes('PRMC')){
+                        document.getElementById('login').remove();
+                    }
+                    else {
+                        document.getElementById('history').remove();
+                    }
+                </script>
+                <!--<select name="lang" id="lang" onchange="language()">
+                      <option value="it">🇮🇹</option>
+                      <option value="en">🇬🇧</option>
+                      <option value="zh">🇨🇳</option>
+                  </select>-->
+                <a class="purple-no-btn" href="add.html">
+                    <img id="plus" src="assets/images/plus.svg" alt="Add an event"/>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="big-container">
+        <div class="contenitore">
+            <h1 class="titolo">Aggiungi una lezione</h1>
+            <p class="sottotitolo">Hai un link di Cisco WebEx, SharePoint o Microsoft Stream contenente la registrazione di una lezione? Condividilo con gli studenti del Politecnico di Milano</p>
+
+            <!-- ALERT BANNER -->
+            <div class="alert-banner">
+                <div class="alert-banner-private" style="background-color: wheat; border-left-color: darkgoldenrod;">
+                    <p>🤚 Solo gli account verificati possono aggiungere lezioni</p>
+                </div>
+            </div>
+
+            <h2>Dettagli lezione</h2>
+
+            <input class="text-input" type="text" name="link" id="link" placeholder="URL della lezione..."/>
+            <textarea class="text-big" type="text" name="titolo" id="titolo" placeholder="Descrizione della lezione"></textarea>
+            <div class="checkbox-container">
+                <label>
+                    <input type="checkbox" name="checkbox-esercitazione" id="esercitazione_ck"/>
+                    Esercitazione
+                </label>
+            </div>
+
+            <h2>Docente</h2>
+            <p>Seleziona il docente del corso, non della lezione</p>
+            <select class="js-example-basic-single" id="docente-sel" name="state" style="width: 100%"><option></option></select>
+
+            <h2>Corso e insegnamento</h2>
+            <select class="js-example-basic-single" id="corso-sel" name="state" style="width: 100%"><option></option></select>
+            <p></p>
+            <select class="js-example-basic-single" id="corso2-sel" name="state" style="width: 100%"><option></option></select>
+
+            <div class="checkbox-container">
+                <label>
+                    <input type="checkbox" name="checkbox-secondo-corso" onclick="onCheck()" id="checker"/>
+                    Più corsi
+                </label>
+            </div>
+
+            <select class="js-example-basic-single" id="insegnamento-sel" name="state" style="width: 100%"><option></option></select>
+            <h2>Data della lezione</h2>
+            <input class="text-input" type="date" name="date" id="date"/>
+            <h2>Login</h2>
+            <p class="sottotitolo">Questa informazione rimarrà privata</p>
+
+            <input class="text-input" type="email" name="email" id="email" placeholder="Inserisci la tua mail di Ateneo"/>
+
+            <div id="multiple-cont">
+                <div class="contenitore"></div>
+            </div>
+
+            <button id="multiple-add" onClick="addMulti()">Aggiungi un'altra lezione</button>
+            <button id="bottone-aggiungi" onClick="submitNew()">Aggiungi</button>
+            <p id="disclaimer">Cliccando su "Aggiungi" confermi di accettare i nostri <a href="termini.html">Termini e condizioni</a>.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-container">
+            <h1>FAQ</h1>
+            <p>Tutte le informazioni necessarie sulla compilazione e l'aggiunta di una nuova lezione su PoliReplay.</p>
+            <div class="divider"></div>
+            <h2>Il nome del professore non è presente?</h2>
+            <p>Assicurati di aver inserito il nome del docente titolare del corso. In pratica, il docente che è specificato nel nome del corso di Beep.</p>
+            <p>Nel caso di una esercitazione, inserisci il nome del docente di teoria nel campo specifico, inserendo poi il nome dell'esercitatore all'interno della descrizione della lezione.</p>
+            <h2>Che data devo inserire?</h2>
+            <p>Nel campo Data è necessario specificare il giorno nel quale la lezione è stata registrata. Non specificare la data odierna!</p>
+            <h2>Quale email devo inserire?</h2>
+            <p>Inserisci la tua email istituzionale che hai specificato in fase di registrazione a PoliReplay. Tutte le altre email verranno rifiutate.</p>
+            <h2>Non ho i permessi per aggiungere una lezione</h2>
+            <p>L'aggiunta delle lezioni su PoliReplay è permessa solo agli utenti autenticati, precedentemente registrati. Non puoi aggiungere una lezione se non rientri tra gli indirizzi verificati e registrati.</p>
+            <h2>C'è qualche altro problema?</h2>
+            <p>Contattaci premendo il pulsante sottostante. Provvederemo a darti tutta l'assistenza di cui necessiti.</p>
+            <button class="universal-btn"><a style="color: black; text-decoration: none;" href="mailto:niccolo.segato@mail.polimi.it">📎Richiedi assistenza</a></button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footbar">
+        <p>© Copyright 2020 PoliReplay - All rights reserved -
+            <a href="privacy.html" >Privacy Policy</a>
+            -
+            <a href="termini.html">Termini e condizioni</a>
+        </p>
+        <div class="cookie-alert">
+            <p>Usiamo i
+                <a href="privacy.html"> cookies</a>
+            </p>
+            <img onclick="document.getElementsByClassName('cookie-alert')[0].style.display = 'none';" src="./assets/images/close.png" alt="close"/>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+#cats-p {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 8px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.cat-p {
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 20px;
+    height: 30px;
+    padding: 4px 10px;
+    margin-right: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-decoration: none;
+    color: black;
+}
+.selected {
+    background-color: rgb(207, 207, 207);
+}
+.cat-p img {
+    margin-top: 1px;
+    height: 18px;
+    width: 18px;
+}
+
+.cat-p p {
+    margin-top: 6px;
+    font-weight: bold;
+}

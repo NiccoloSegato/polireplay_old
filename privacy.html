@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Privacy Policy - PoliReplay</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+            name="description"
+            content="Guarda e aggiungi tutte le lezioni registrate del Politecnico di Milano"
+    />
+    <link rel="manifest" href="./assets/manifest.json" />
+    <meta property="og:type'" content="website">
+    <meta property="og:url'" content="www.polireplay.it/privacy">
+    <meta property="og:title'" content="Privacy Policy - PoliReplay">
+    <meta property="og:image'" content="https://polireplay.it/static/media/logo.f3108e60.png">
+    <meta property="og:description'" content="Cerca, filtra e riguarda le lezioni online del Politecnico di Milano. Semplice, gratuito e veloce.">
+    <script src="scripts/global.js"></script>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/privacy.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/cookiesalert.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<div class="NavBar">
+    <div class="logo">
+        <a href="https://www.polireplay.it">
+            <img src="./assets/images/logo.png" alt="Logo" />
+        </a>
+    </div>
+    <div class="menu">
+        <ul>
+            <!--<a title="PoliReplay Blog" class="purple-blog-btn" href="https://polireplay.it/blog"><p>BLOG</p></a>-->
+            <a title="Login" id="login" class="purple-blog-btn" href="https://polireplay.it/login"><p>LOGIN</p></a>
+                <a title="Cronologia" id="history" class="purple-blog-btn" href="https://polireplay.it/profile.php"><p>PROFILO</p></a>
+                <script>
+                    if(document.cookie.includes('PRAC') && document.cookie.includes('PRMC')){
+                        document.getElementById('login').remove();
+                    }
+                    else {
+                        document.getElementById('history').remove();
+                    }
+                </script>
+            <!--<select name="lang" id="lang" onchange="language()">
+                      <option value="it">🇮🇹</option>
+                      <option value="en">🇬🇧</option>
+                      <option value="zh">🇨🇳</option>
+                  </select>-->
+            <a class="purple-no-btn" href="add.html">
+                <img id="plus" src="assets/images/plus.svg" alt="Add an event"></img>
+            </a>
+        </ul>
+    </div>
+</div>
+
+<div class="privacy-container">
+    <h1>Politica sulla Privacy</h1>
+    <p id="sub-privacy">Informazioni e modalità del trattamento dei dati del sito www.polireplay.it</p>
+    <p>Ultima modifica: 12 novembre 2020</p>
+    <div class="divider"></div>
+
+    <p>🇬🇧 If you need a translation of this page, write an email to <a href="mailto: niccolo.segato@mail.polimi.it">niccolo.segato@mail.polimi.it</a> and we will provide you with the English version of our privacy policy. Our team is working on getting the English version published as soon as possible.</p>
+    <p>🇨🇳 如果您需要此页的翻译，请发送电子邮件至<a href="mailto: niccolo.segato@mail.polimi.it">niccolo.segato@mail.polimi.it</a>，我们将为您提供隐私政策的英文版。 我们的小组正在努力尽快发布中文版本。</p>
+
+    <div class="divider"></div>
+
+    <p>PoliReplay è una piattaforma online soggetta alla raccolta di dati dell'utente da parte dei nostri sistemi informatici e di partner terzi. Tutti i dati in possesso di PoliReplay vengono trattati secondo quanto previsto dal Regolamento UE n. 2016/679 relativo alla protezione delle persone fisiche con riguardo al trattamento dei dati personali.</p>
+
+    <h2>Titolare del trattamento</h2>
+    <p>Il titolare del trattamento dei dati è PoliReplay, nella persona di Alessio Rocca. Punto di contatto: alessio.rocca@mail.polimi.it.</p>
+    <p>Il responsbile interno del trattamento dei dati è Niccolò Segato. Punto di contatto: niccolo.segato@mail.polimi.it.</p>
+
+    <h2>Finalità del trattamento</h2>
+    <p>Il trattamento è finalizzato unicamente a mettere a disposizione degli studenti del Politecnico di Milano lo streaming dei corsi.</p>
+    <p>PoliReplay si riserva la possibilità di eseguire indagini di mercato e profilazioni esclusivamente su dati aggregati e resi anonimi, con la finalità di migliorare il servizio offerto e rispettare requisiti di siti partner terzi.</p>
+
+    <h2>I dati di navigazione</h2>
+    <p>I sistemi informatici e le procedure software preposte al funzionamento di questo sito acquisiscono, nel corso del loro normale esercizio, alcuni dati personali la cui trasmissione è implicita nell’uso dei protocolli di comunicazione di Internet. In questa categoria di dati rientrano i seguenti:</p>
+    <ul>
+        <li><p>indirizzi IP dei dispositivi utilizzati dagli utenti;</p></li>
+        <li><p>data e ora in cui è stata ricevuta la richiesta;</p></li>
+        <li><p>gli indirizzi in notazione URI/URL (Uniform Resource Identifier/Locator) delle risorse richieste;</p></li>
+        <li><p>il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.);</p></li>
+        <li><p>la dimensione in byte della risposta;</p></li>
+        <li><p>indirizzo URI/URL della pagina di provenienza (referrer);</p></li>
+        <li><p>stringa di riconoscimento del browser (user agent).</p></li>
+    </ul>
+    <p>Tali dati non persistono per più di 1 anno, passato il quale vengono automaticamente cancellati (salve eventuali necessità di accertamento di reati da parte dell’Autorità giudiziaria). Inoltre, vengono trattati, in forma anonima, dati necessari per la fruizione dei servizi web, allo scopo di controllare il corretto funzionamento dei servizi offerti.</p>
+    <p>Questi stessi dati potrebbero, essere altresì utilizzati per individuare ed accertare le responsabilità in caso di eventuali reati informatici ai danni del sito.</p>
+
+    <h2>Informativa sui Cookies</h2>
+    <p>I cookie sono piccoli file di testo che vengono salvati nel computer di un utente quando viene visitato un sito web. I cookie sono ampiamente impiegati dai siti web per migliorare le prestazioni e i servizi offerti, per migliorare l'esperienza di navigazione degli utenti, per ottenere informazioni sul numero e sulla tipologia di utenti e per altri fini quali quelli pubblicitari.</p>
+    <p>I cookie inseriti dal proprietario del sito web sono definiti “cookie di prime parti”; quelli inseriti da persone diverse dal proprietario del sito web sono definiti “cookie di terze parti”. I cookie di terze parti servono a rendere disponibili, nel sito web, determinate funzionalità. Chi imposta i cookie di terze parti sarà in grado di riconoscere il computer dell’utente quando accede al sito web e anche quando visita determinati altri siti.</p>
+    <p>I cookie raccolgono informazioni sulle preferenze dell’utente, come ad esempio la lingua utilizzata, oppure individuare in modo univoco un utente per associargli per esempio il classico carrello, il login a zone riservate ecc. (cookie tecnico).</p>
+    <p>I cookie raccolgono informazioni sulle visite del sito web. Tali dati possono includere dettagli sugli indirizzi IP, sul tipo di browser e sulla risoluzione dello schermo, nonché una serie di informazioni sulle pagine visitate, pagine di entrata e uscita, durata di lettura di una pagina etc. (cookie analitico).</p>
+    <p>I cookie raccolgono informazioni che permettono di comprendere gli interessi e/o le abitudini dei visitatori in modo da fornire servizi o pubblicità mirata (cookie di profilazione).</p>
+    <p>Ogni cookie ha una propria durata che è stabilita da chi li utilizza. Dopo tale durata il cookie si cancella automaticamente.</p>
+    <p>Di seguito troverai tutte le informazioni sui cookie installati attraverso questo sito, e le indicazioni necessarie su come gestire le tue preferenze riguardo ad essi.
+        Ricordiamo che l’utente, tramite configurazione del proprio browser, può in qualsiasi momento disabilitare l’operatività dei cookie o essere informato nel momento in cui riceve il cookie e negare il consenso all’invio. Di seguito si indicano agli Utenti i link che spiegano come gestire o disabilitare i cookie per i browser Internet più diffusi:
+    </p>
+    <ul>
+        <li><a href="http://windows.microsoft.com/it-IT/internet-explorer/delete-manage-cookie">Internet Explorer</a></li>
+        <li><a href="https://support.google.com/chrome/answer/95647">Google Chrome</a></li>
+        <li><a href="http://support.mozilla.org/it/kb/Gestione%20dei%20cookie">Mozilla Firefox</a></li>
+        <li><a href="http://help.opera.com/Windows/10.00/it/cookies.html">Opera</a></li>
+        <li><a href="https://support.apple.com/kb/PH19255">Safari</a></li>
+    </ul>
+
+    <h2>Informazioni raccolte dal sito</h2>
+    <h3>Dati raccolti nel processo di registrazione</h3>
+    <ul>
+        <li><p>Nome e cognome dell'utente;</p></li>
+        <li><p>Data e ora in cui è stata ricevuta la richiesta;</p></li>
+        <li><p>E-mail istituzionale;</p></li>
+        <li><p>Numero di telefono mobile (non obbligatorio, a discrezione dell'utente);</p></li>
+    </ul>
+    <p>Inoltre, in fase di aggiunta delle lezioni vengono raccolti i seguenti dati</p>
+    <ul>
+        <li><p>URL della registrazione;</p></li>
+        <li><p>Descrizione, nome del docente, corso e insegnamento;</p></li>
+        <li><p>Data della lezione e data di aggiunta della lezione sul database;</p></li>
+        <li><p>E-mail istituzionale dell'utente;</p></li>
+    </ul>
+
+    <h2>Modalità e luogo del trattamento dei Dati raccolti</h2>
+    <h3>Modalità di trattamento</h3>
+    <p>Il Titolare adotta le opportune misure di sicurezza volte ad impedire l’accesso, la divulgazione, la modifica o la distruzione non autorizzate dei Dati Personali. Il trattamento viene effettuato mediante strumenti informatici e/o telematici, con modalità organizzative e con logiche strettamente correlate alle finalità indicate. Oltre al Titolare, in alcuni casi, potrebbero avere accesso ai Dati altri soggetti coinvolti nell’organizzazione di questa Applicazione (personale amministrativo, commerciale, marketing, legali, amministratori di sistema) ovvero soggetti esterni (come fornitori di servizi tecnici terzi, corrieri postali, hosting provider, società informatiche, agenzie di comunicazione) nominati anche, se necessario, Responsabili del Trattamento da parte del Titolare. L’elenco aggiornato dei Responsabili potrà sempre essere richiesto al Titolare del Trattamento</p>
+    <h3>Base giuridica del trattamento</h3>
+    <p>Il Titolare tratta i dati che hanno per oggetto i cookie sopra descritti, e sono trattati con la specifica finalità tecnica legata alla funzionalità del presente sito internet. Il trattamento ha quindi come base giuridica il legittimo interesse del titolare (art. 6.1 lett. f del Regolamento UE) ad assicurare il regolare funzionamento del sito web ed a garantire la sicurezza di navigazione.</p>
+    <h3>Luogo</h3>
+    <p>I Dati sono trattati presso le sedi operative del Titolare ed in ogni altro luogo in cui le parti coinvolte nel trattamento siano localizzate. Per ulteriori informazioni, contatta il Titolare. I Dati Personali dell’Utente potrebbero essere trasferiti in un paese diverso da quello in cui l’Utente si trova. Per ottenere ulteriori informazioni sul luogo del trattamento l’Utente può fare riferimento alla sezione relativa ai dettagli sul trattamento dei Dati Personali.</p>
+
+    <h2>Esercizio dei diritti dell’interessato</h2>
+    <p>In qualità di soggetto interessato può chiedere in qualsiasi momento al Titolare:</p>
+    <ul>
+        <li>la conferma dell’esistenza o meno di dati personali che lo riguardano;</li>
+        <li>l'accesso ai suoi dati personali ed alle informazioni relative agli stessi;</li>
+        <li>la rettifica dei dati inesatti o l'integrazione di quelli incompleti;</li>
+        <li>la limitazione del trattamento dei suoi dati personali (al ricorrere di una delle ipotesi indicate nell'art. 18, paragrafo 1 del Regolamento), la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non è necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati;</li>
+        <li>la cancellazione dei dati personali che la riguardano (al verificarsi di una delle condizioni indicate nell'art. 17, paragrafo 1 del Regolamento e nel rispetto delle eccezioni previste nel paragrafo 3 dello stesso articolo)</li>
+    </ul>
+    <p>In qualità di soggetto interessato ha inoltre diritto di opporsi in tutto o in parte:</p>
+    <ul>
+        <li>per motivi legittimi al trattamento dei dati personali che lo riguardano, ancorché pertinenti allo scopo della raccolta;</li>
+        <li>al trattamento di dati personali che lo riguardano a fini di invio di promozione di iniziative formative ed eventi culturali del Politecnico di Milano</li>
+    </ul>
+    <p>Tali diritti sono esercitabili rivolgendosi al Titolare del trattamento.</p>
+    <p>Qualora ritenga che i suoi diritti siano stati violati dal titolare e/o da un terzo, ha il diritto di proporre reclamo all’Autorità per la protezione dei dati personali e/o ad altra autorità di controllo competente in forza del Regolamento.</p>
+
+    <h2>Modifiche a questa privacy policy</h2>
+    <p>Il Titolare del Trattamento si riserva il diritto di apportare modifiche alla presente privacy policy in qualunque momento notificandolo agli Utenti su questa pagina e, se possibile, su questa Applicazione nonché, qualora tecnicamente e legalmente fattibile, inviando una notifica agli Utenti attraverso uno degli estremi di contatto di cui è in possesso. Si prega dunque di consultare con frequenza questa pagina, facendo riferimento alla data di ultima modifica indicata all'inizio della pagina.</p>
+    <p>Qualora le modifiche interessino trattamenti la cui base giuridica è il consenso, il Titolare provvederà a raccogliere nuovamente il consenso dell’Utente, se necessario.</p>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footbar">
+    <p>© Copyright 2020 PoliReplay - All rights reserved -
+        <a href="" >Privacy Policy</a>
+        -
+        <a href="termini.html">Termini e condizioni</a>
+    </p>
+    <div class="cookie-alert">
+        <p>Usiamo i
+            <a href="privacy.html"> cookies</a>
+        </p>
+        <img onclick="document.getElementsByClassName('cookie-alert')[0].style.display = 'none';" src="./assets/images/close.svg" alt="close"/>
+    </div>
+</div>
+
+</body>
+</html>

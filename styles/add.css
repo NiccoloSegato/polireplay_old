@@ -1,0 +1,150 @@
+.big-container {
+    padding: 24px;
+    display: flex;
+}
+
+.contenitore {
+  margin-bottom: 24px;
+}
+
+.alert-banner {
+  width: calc(100% - 8px);
+  margin-left: 8px;
+}
+
+.titolo {
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
+.sottotitolo {
+  margin-left: 8px;
+  margin-right: 16px;
+  margin-top: 10px;
+}
+
+.text-input {
+  width: calc(100% - 8px);
+  height: 38px;
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  border-radius: 19px;
+  border-width: 1px;
+  border-color: rgb(204, 204, 204);
+  border-style: solid;
+  box-shadow: 0px 1px 15px rgba(216, 216, 216, 0.473);
+  font-size: 16px;
+  font-family: Finador;
+  outline: none;
+}
+
+.text-big {
+  width: calc(100% - 8px);
+  height: 140px;
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  border-radius: 19px;
+  border-width: 1px;
+  border-color: rgb(204, 204, 204);
+  border-style: solid;
+  box-shadow: 0px 1px 15px rgba(216, 216, 216, 0.473);
+  font-size: 16px;
+  font-family: Finador;
+  outline: none;
+}
+.text-input:focus {
+  border-width: 2px;
+  border-color: rgb(38, 132, 255);
+  box-shadow: 0px 1px 15px rgba(216, 216, 216, 0.473);
+  outline: none;
+}
+
+#secondo-corso {
+  display: none;
+  margin-top: 16px;
+}
+
+.checkbox-container {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#multiple-add {
+  height: 38px;
+  width: calc(100% - 8px);
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 1px 15px rgba(216, 216, 216, 0.473);
+  border: 2px solid rgb(221, 221, 221);
+  text-align: center;
+  font-size: 16px;
+  font-family: Finador;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+#bottone-aggiungi {
+  height: 38px;
+  width: calc(100% - 8px);
+  color: white;
+  background: linear-gradient(90deg, rgba(0, 60, 255, 1) 0%, rgba(0, 255, 136, 1) 100%);
+  border-width: 0;
+  border-radius: 20px;
+  box-shadow: 0 1px 15px rgba(216, 216, 216, 0.473);
+  text-align: center;
+  font-size: 16px;
+  font-family: Finador;
+  outline: none;
+}
+
+.alert-banner-private {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border-left-width: 4px;
+  border-radius: 8px;
+  border-left-style: solid;
+  text-align: center;
+  font-size: 18px;
+}
+
+.alert-banner-private p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+#disclaimer {
+  color: rgb(204, 204, 204);
+  text-align: center;
+}
+#disclaimer a{
+  color: rgb(204, 204, 204);
+}
+
+.faq-container {
+  padding-left: 5%;
+  flex: 1 1 0px;
+}
+
+.divider {
+  background-color: rgb(214, 214, 214);
+  height: 2px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1250px) {
+  .big-container {
+    flex-direction: column;
+  }
+}

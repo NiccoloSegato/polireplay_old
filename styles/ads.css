@@ -1,0 +1,11 @@
+.adscont {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.adscont {
+}

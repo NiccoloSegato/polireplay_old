@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Grazie della conferma - PoliReplay</title>
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+            name="description"
+            content="Guarda e aggiungi tutte le lezioni registrate del Politecnico di Milano"
+    />
+    <link rel="manifest" href="./assets/manifest.json" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/global.js"></script>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/cookiesalert.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<div class="NavBar">
+    <div class="logo">
+        <a href="https://www.polireplay.it">
+            <img src="./assets/images/logo.png" alt="Logo" />
+        </a>
+    </div>
+    <div class="menu">
+        <ul>
+            <!--<a title="PoliReplay Blog" class="purple-blog-btn" href="https://polireplay.it/blog"><p>BLOG</p></a>-->
+            <a title="Login" id="login" class="purple-blog-btn" href="https://polireplay.it/login"><p>LOGIN</p></a>
+                <a title="Cronologia" id="history" class="purple-blog-btn" href="https://polireplay.it/profile.php"><p>PROFILO</p></a>
+                <script>
+                    if(document.cookie.includes('PRAC') && document.cookie.includes('PRMC')){
+                        document.getElementById('login').remove();
+                    }
+                    else {
+                        document.getElementById('history').remove();
+                    }
+                </script>
+            <!--<select name="lang" id="lang" onchange="language()">
+                      <option value="it">🇮🇹</option>
+                      <option value="en">🇬🇧</option>
+                      <option value="zh">🇨🇳</option>
+                  </select>-->
+            <a class="purple-no-btn" href="add.html">
+                <img id="plus" src="assets/images/plus.svg" alt="Add an event"></img>
+            </a>
+        </ul>
+    </div>
+</div>
+
+<div id="confirmation">
+    <h1 style="margin-left: 24px;">Grazie</h1>
+    <p style="margin-left: 24px;">Grazie per aver aggiunto una lezione su PoliReplay</p>
+</div>
+
+<!-- FOOTER -->
+<div id="footbar">
+    <p>© Copyright 2020 PoliReplay - All rights reserved -
+        <a href="privacy.html" >Privacy Policy</a>
+        -
+        <a href="termini.html">Termini e condizioni</a>
+    </p>
+    <div class="cookie-alert">
+        <p>Usiamo i
+            <a href="privacy.html"> cookies</a>
+        </p>
+        <img onclick="document.getElementsByClassName('cookie-alert')[0].style.display = 'none';" src="./assets/images/close.svg" alt="close"/>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyBsinWHDyO-U8vf30H8_cKJGN95ME7xLH0",
+        authDomain: "polimi-lessons.firebaseapp.com",
+        databaseURL: "https://polimi-lessons.firebaseio.com",
+        projectId: "polimi-lessons",
+        storageBucket: "polimi-lessons.appspot.com",
+        messagingSenderId: "506190449618",
+        appId: "1:506190449618:web:fd0888c9a25639f5b8560b",
+        measurementId: "G-2FDP98VYXF"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+</body>
+</html>

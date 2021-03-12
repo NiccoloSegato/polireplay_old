@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Candidatura - PoliReplay</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="./assets/images/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+        name="description"
+        content="Registra il tuo indirizzo email per aggiungere lezioni su PoliReplay"
+        />
+        <link rel="manifest" href="./assets/manifest.json" />
+        <meta property="og:type'" content="website">
+        <meta property="og:url'" content="www.polireplay.it">
+        <meta property="og:title'" content="Cerca e riguarda le lezioni - PoliReplay">
+        <meta property="og:image'" content="https://polireplay.it/static/media/logo.f3108e60.png">
+        <meta property="og:description'" content="Cerca, filtra e riguarda le lezioni online del Politecnico di Milano. Semplice, gratuito e veloce.">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script src="./scripts/global.js"></script>
+        <script src="./scripts/data.js"></script>
+        <link rel="stylesheet" href="./styles/navbar.css">
+        <link rel="stylesheet" href="./styles/news.css">
+        <link rel="stylesheet" href="./styles/feed.css">
+        <link rel="stylesheet" href="./styles/add.css">
+        <link rel="stylesheet" href="./styles/add.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="stylesheet" href="./styles/cookiesalert.css">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <script>
+            function twoDigits(d) {
+                if(0 <= d && d < 10) return "0" + d.toString();
+                if(-10 < d && d < 0) return "-0" + (-1*d).toString();
+                return d.toString();
+            }
+
+            Date.prototype.toMysqlFormat = function() {
+                return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getUTCHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
+            };
+
+            function submit() {
+
+                let email = document.getElementById('candidatura').value;
+                let name = document.getElementById('nome_c').value;
+                let cognome = document.getElementById('cognome_c').value;
+                let cellulare = document.getElementById('cell_c').value;
+                let corso = document.getElementById('corso-sel').value;
+                let insegnamento = document.getElementById('insegnamento-sel').value;
+                let datePHP = new Date().toMysqlFormat();
+
+                if(email !== '' && name !== '' && cognome !== '' && corso !== ''  && insegnamento !== ''){
+
+                    let status = 'pending';
+                    if(email.includes('@polimi.it') || email.includes('@mail.polimi.it')){
+                        window.location.href = "https://polireplay.it/php/addcreator.php?dest=" + email + "&loc=it&name=" + name + "&cognome=" + cognome + "&cellulare=" + cellulare + "&corso=" + corso + "&insegnamento=" + insegnamento + "&date=" +  datePHP;
+                    }
+                    else {
+                        alert('Inserisci solo una email istituzionale')
+                    }
+                }
+                else {
+                    alert("E' necessario compilare tutti i campi del form contrassegnati con *");
+                }
+            }
+
+            function onCheck() {
+                let checker = document.getElementById('checker');
+                if (checker.checked){
+                    let btn = document.getElementById('bottone-aggiungi');
+                    btn.style.background = 'blue';
+                    btn.style.color = 'white';
+                    btn.onclick = submit;
+                }
+                else {
+                    let btn = document.getElementById('bottone-aggiungi');
+                    btn.style.background = 'rgb(223, 223, 223)';
+                    btn.onclick = null;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <div class="NavBar">
+            <div class="logo">
+              <a href="https://www.polireplay.it">
+                <img src="./assets/images/logo.png" alt="Logo" />
+              </a>
+            </div>
+            <div class="menu">
+              <ul>
+                <!--<a title="PoliReplay Blog" class="purple-blog-btn" href="https://polireplay.it/blog"><p>BLOG</p></a>-->
+                <a title="Login" id="login" class="purple-blog-btn" href="https://polireplay.it/login"><p>LOGIN</p></a>
+                <a title="Cronologia" id="history" class="purple-blog-btn" href="https://polireplay.it/profile.php"><p>PROFILO</p></a>
+                <script>
+                    if(document.cookie.includes('PRAC') && document.cookie.includes('PRMC')){
+                        document.getElementById('login').remove();
+                    }
+                    else {
+                        document.getElementById('history').remove();
+                    }
+                </script>
+                  <!--<select name="lang" id="lang" onchange="language()">
+                      <option value="it">🇮🇹</option>
+                      <option value="en">🇬🇧</option>
+                      <option value="zh">🇨🇳</option>
+                  </select>-->
+                <a class="purple-no-btn" href="add.html">
+                    <img id="plus" src="assets/images/plus.svg" alt="Add an event"/>
+                </a>
+              </ul>
+            </div>
+          </div>
+
+        <h1 style="margin-top: 40px; padding-top: 16px; padding-left: 24px; padding-right: 16px; margin-left: 0px; margin-bottom: 0px; margin-right: 0px;" >Registra il tuo indirizzo</h1>
+        <p style=" padding-left: 24px; padding-right: 16px; margin-top: 10px; color: rgb(112, 112, 112);" >Inserisci il tuo indirizzo email di Ateneo. Abiliterai così il tuo account per aggiungere lezioni su PoliReplay.</p>
+
+        <label for="candidatura" style="margin-left: 24px;">Email *</label>
+        <input type="email" class="text-input" style="margin-left: 24px; width: calc(100% - 48px) !important; max-width: 500px;" id="candidatura" placeholder="nome.cognome@mail.polimi.it">
+        <label for="nome_c" style="margin-left: 24px;">Nome *</label>
+        <input type="text" class="text-input" style="margin-left: 24px; width: calc(100% - 48px) !important; max-width: 500px;" id="nome_c" placeholder="Nome">
+        <label for="cognome_c" style="margin-left: 24px;">Cognome *</label>
+        <input type="text" class="text-input" style="margin-left: 24px; width: calc(100% - 48px) !important; max-width: 500px;" id="cognome_c" placeholder="Cognome">
+        <label for="cell_c" style="margin-left: 24px;">Cellulare</label>
+        <input type="number" class="text-input" style="margin-left: 24px; width: calc(100% - 48px) !important; max-width: 500px;" id="cell_c" placeholder="Numero di telefono">
+        <h2 style="margin-left: 24px; margin-bottom: 8px;">Corso e insegnamento *</h2>
+        <p style="margin-left: 24px; margin-top: 8px;">Questi saranno il corso e l'insegnamento per il quale potrai aggiungere le lezioni</p>
+        <div style="margin-left: 24px; width: calc(100% - 48px); max-width: 500px !important;">
+            <select class="js-example-basic-single" id="corso-sel" name="state" style="width: 100%"><option></option></select>
+            <p></p>
+            <select class="js-example-basic-single" id="insegnamento-sel" name="state" style="width: 100%"><option></option></select>
+        </div>
+
+        <div class="checkbox-container" style="margin-left: 24px; width: calc(100% - 48px);">
+            <label>
+                <input type="checkbox" name="checkbox-secondo-corso" onclick="onCheck()" id="checker"/>
+                Ho letto e accetto i <a href="termini.html">Termini e le Condizioni</a> del servizio nonché la <a href="privacy.html">Privacy Policy</a>*
+            </label>
+        </div>
+        <button id="bottone-aggiungi" style="background:rgb(223, 223, 223) !important; color: black; margin-top: 24px; margin-left: 24px; width: calc(100% - 48px) !important; max-width: 400px;">Registra indirizzo</button>
+        <p style="margin-left: 24px;">I campi contrassegnati con * sono obbligatori</p>
+
+        <h1 style=" padding-top: 24px; padding-left: 24px; padding-right: 16px; margin: 0px;" >About the project</h1>
+        <!-- NEWS -->
+        <div id="news-big">
+            <div id="news" class="subdiv">
+                <img src="./assets/images/news.png" alt="Semplificare lo studio"/>
+                <div id="news-container">
+                    <h1>Dagli studenti, per gli studenti</h1>
+                    <p>PoliReplay è la piattaforma per cercare velocemente le lezioni online del Politecnico di Milano. Nasce dalla passione degli studenti, che lo sviluppano e lo supportano, servendolo gratuitamente.<br></br>Visita i nostri canali social <a href="https://www.instagram.com/polireplay">@polireplay</a> su Instagram e <a href="https://www.twitter.com/polireplay">@polireplay</a> su Twitter per rimanere sempre aggiornato!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footbar">
+            <p>© Copyright 2020 PoliReplay - All rights reserved -
+                <a href="privacy.html" >Privacy Policy</a>
+                -
+                <a href="termini.html">Termini e condizioni</a>
+            </p>
+            <div class="cookie-alert">
+                <p>Usiamo i
+                    <a href="privacy.html"> cookies</a>
+                </p>
+                <img onclick="document.getElementsByClassName('cookie-alert')[0].style.display = 'none';" src="./assets/images/close.svg" alt="close"/>
+            </div>
+        </div>
+    </body>
+</html>

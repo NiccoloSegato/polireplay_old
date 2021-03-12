@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Ci siamo trasferiti - PoliReplay</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="./assets/images/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+        name="description"
+        content="Guarda e aggiungi tutte le lezioni registrate del Politecnico di Milano"
+        />
+        <link rel="manifest" href="./assets/manifest.json" />
+        <meta property="og:type'" content="website">
+        <meta property="og:url'" content="www.polireplay.it">
+        <meta property="og:title'" content="Cerca e riguarda le lezioni - PoliReplay">
+        <meta property="og:image'" content="https://polireplay.it/static/media/logo.f3108e60.png">
+        <meta property="og:description'" content="Cerca, filtra e riguarda le lezioni online del Politecnico di Milano. Semplice, gratuito e veloce.">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script src="scripts/data.js"></script>
+        <script src="scripts/global.js"></script>
+        <link rel="stylesheet" href="./styles/navbar.css">
+        <link rel="stylesheet" href="./styles/feed.css">
+        <link rel="stylesheet" href="./styles/add.css">
+        <link rel="stylesheet" href="./styles/news.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="stylesheet" href="./styles/cookiesalert.css">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1F7WCE920D"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1F7WCE920D');
+        </script>
+
+        <script>
+            function search() {
+                let query = $('#searchbar-sel').select2('data');
+                console.log(query[0]);
+                window.location.href = "search.php?query=" + query[0].text;
+            }
+        </script>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <div class="NavBar">
+            <div class="logo">
+              <a href="https://www.polireplay.it" title="Home">
+                <img src="./assets/images/logo.png" alt="Logo" />
+              </a>
+            </div>
+        </div>
+
+        <h1 style="margin-left: 24px;">PoliReplay si è trasferito</h1>
+        <p style="margin-left: 24px;">Visita il nuovo sito all'indirizzo <a href="https://polireplay.it" title="PoliReplay">https://polireplay.it</a></p> 
+
+        <!-- FOOTER -->
+        <div id="footbar">
+            <p>© Copyright 2020 PoliReplay - All rights reserved -
+                <a href="https://polireplay.it/privacy.html" >Privacy Policy</a>
+                -
+                <a href="https://polireplay.it/termini.html">Termini e condizioni</a>
+            </p>
+        </div>
+    </body>
+</html>

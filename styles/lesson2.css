@@ -1,0 +1,168 @@
+.master {
+    padding: 24px;
+    display: flex;
+}
+
+.video {
+    background: linear-gradient(90deg, rgba(0, 60, 255, 1) 0%, rgba(0, 255, 136, 1) 100%);
+    width: calc(100% - 48px);
+    padding: 24px;
+    color: white;
+    position: relative; /* If you want text inside of it */
+    border-radius: 20px;
+    margin-top: 24px;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    cursor: pointer;
+}
+
+.video-sub {
+    bottom: 0px;
+    left: 18px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.white-internal {
+    background-color: white;
+    height: 40px;
+    border-radius: 20px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    margin-bottom: 16px;
+    margin-top: 12px;
+}
+
+.white-internal img {
+    margin-top: 5px;
+    margin-left: 8px;
+    height: 30px;
+}
+
+.white-internal p {
+    margin-top: 11px;
+    margin-left: 8px;
+    height: 30px;
+}
+
+#prof_user {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: black;
+}
+
+#prof_user p {
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.prof_user-border {
+    width: 48px;
+    height: 48px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, rgba(0, 60, 255, 1) 0%, rgba(0, 255, 136, 1) 100%);
+    padding: 2px;
+    margin-bottom: 16px;
+}
+
+.prof_user-border-int {
+    width: 44px;
+    height: 44px;
+    border-radius: 23px;
+    background: white;
+    padding: 2px;
+}
+
+.prof_user-border img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.scritte h1 {
+    margin: 0px;
+}
+
+.divider {
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+    height: 2px;
+}
+
+.news {
+    padding-left: 5%;
+    flex: 1 1 0px;
+}
+
+.news-latest {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(238, 238, 238);
+    width: calc(100% - 24px);
+    border-radius: 10px;
+    padding: 12px;
+}
+
+#insegnamento_d {
+    color: white;
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    position: relative;
+    padding-top: 5px;
+}
+.comment div {
+    padding-left: 16px;
+}
+
+.comment h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.border-img {
+    width: 4px;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+@media screen and (max-width: 1000px) {
+    .video {
+        width: calc(100% - 48px);
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+    .master {
+        flex-direction: column;
+    }
+    .news {
+        padding-left: 0;
+    }
+    .video-sub {
+        flex-direction: column;
+    }
+    .video-sub img {
+        width: 30px;
+    }
+    .scritte p {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #adamazon {
+        display: none !important;
+    }
+}

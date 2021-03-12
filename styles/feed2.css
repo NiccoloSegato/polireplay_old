@@ -1,0 +1,175 @@
+#feed-container {
+    padding-top: 0px!important;
+    padding: 24px;
+}
+.subdiv {
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0px 1px 15px rgba(216, 216, 216, 0.342);
+    cursor: pointer;
+    display: flex;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-height: 500px;
+    position: relative;
+}
+.border-img {
+    width: 4px;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.feed-element {
+    text-decoration: none;
+    padding-left: 10px;
+    text-decoration: none;
+    color: black !important;
+}
+
+.user_lbl {
+    color: rgb(112, 112, 112);
+    margin-bottom: 5px;
+}
+.grey {
+    color: transparent;
+    margin-bottom: 5px;
+    background-color: rgb(231, 231, 231);
+}
+.insegnamento_lbl {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0px;
+}
+.anno_lbl {
+    background-color: blue;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 60px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 2px;
+    height: 19px;
+    vertical-align: middle;
+}
+.aligned {
+    display: flex;
+}
+.titolo_lbl {
+    font-style: italic;
+}
+.prof_lbl {
+    margin: 0px;
+    color: rgb(112, 112, 112);
+}
+
+.next-page-btn {
+    box-shadow: 0 1px 15px rgba(216, 216, 216, 0.473);
+    border-color: rgb(204, 204, 204);
+    margin-left: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    background: none;
+    color: inherit;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 30px;
+    visibility: hidden;
+}
+
+#calltoaction {
+    background: linear-gradient(90deg, rgba(0, 60, 255, 1) 0%, rgba(0, 255, 136, 1) 100%);
+    color: white;
+    border-radius: 8px;
+    margin-left: 24px;
+    width: calc(100% - 96px);
+}
+
+#newlesson {
+    padding: 24px;
+}
+#internal-col {
+    padding: 4px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(0, 60, 255, 1) 0%, rgba(0, 255, 136, 1) 100%);
+}
+#internal-white {
+    padding: 16px;
+    border-radius: 8px;
+    background: white;
+}
+
+.text-input {
+    width: calc(100% - 8px);
+    height: 38px;
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+    border-radius: 19px;
+    border-width: 1px;
+    border-color: rgb(204, 204, 204);
+    border-style: solid;
+    box-shadow: 0px 1px 15px rgba(216, 216, 216, 0.473);
+    font-size: 16px;
+    font-family: Finador;
+    outline: none;
+    max-width: 600px;
+}
+
+#bottone-aggiungi {
+    height: 38px;
+    width: calc(100% - 8px);
+    color: white;
+    background: linear-gradient(90deg, rgba(0, 60, 255, 1) 0%, rgba(0, 255, 136, 1) 100%);
+    border-width: 0;
+    border-radius: 20px;
+    box-shadow: 0 1px 15px rgba(216, 216, 216, 0.473);
+    text-align: center;
+    font-size: 16px;
+    font-family: Finador;
+    outline: none;
+    max-width: 100px;
+}
+.bottom_doc {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+}
+
+#cats {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 26px;
+    width: calc(100%- 48px);
+    margin-left: 24px;
+    margin-bottom: 0;
+    margin-top: 8px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.cat {
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 13px;
+    height: 20px;
+    padding: 2px 7px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-decoration: none;
+    color: black;
+}
+.cat img {
+    margin-top: 1px;
+    height: 18px;
+    width: 18px;
+}
+
+.cat p {
+    margin-left: 6px;
+    margin-top: 2px;
+}

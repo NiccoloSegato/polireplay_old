@@ -1,0 +1,10 @@
+#confirmation {
+    padding: 24px;
+}
+#modifica {
+    display: flex;
+    flex-direction: row;
+}
+#lesson-code {
+    font-weight: bold;
+}
