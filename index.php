@@ -49,7 +49,7 @@ $result2 = mysqli_query($conn, $query2);
         <meta property="og:image'" content="./assets/images/favicon.ico">
         <meta property="og:description'" content="Cerca, filtra e riguarda le lezioni online del Politecnico di Milano. Semplice, gratuito e veloce.">
         <script src="scripts/global.js"></script>
-        <link rel="stylesheet" href="./styles/navbar.css">
+        <link rel="stylesheet" href="./styles/navbar2.css">
         <link rel="stylesheet" href="./styles/feed3.css">
         <link rel="stylesheet" href="./styles/search.css">
         <link rel="stylesheet" href="./styles/add.css">
@@ -67,6 +67,12 @@ $result2 = mysqli_query($conn, $query2);
     </script>
     </head>
     <body>
+        <div id="superbanner">
+            <div id="superbanner-cont">
+                <h4>PoliReplay ❤️ Open-Source</h4>
+                <a href="https://github.com/NiccoloSegato/polireplay" target="_blank" title="PoliReplay on GitHub">PoliReplay on GitHub &gt;</a>
+            </div>
+        </div>
         <!-- NAVBAR -->
         <div class="NavBar">
             <div class="logo">
@@ -183,10 +189,10 @@ $result2 = mysqli_query($conn, $query2);
         <!-- NEWS -->
         <div class="news-big">
             <div id="news" class="subdiv">
-                <img src="./assets/images/support.jpg" alt="Telegram support"/>
+                <img src="./assets/images/github.png" alt="GitHub"/>
                 <div class="news-container">
-                    <h1>Hai bisogno di aiuto?</h1>
-                    <p>Hai problemi con l'aggiunta di una lezione? Non trovi un professore o il link non funziona? Noi siamo qui per aiutarti! Cerca <strong>@polireplay_support</strong> su Telegram e ricevi assistenza immediata dal nostro team ✌🏼. Puoi sempre scriverci anche via e-mail a <a href="mailto:info@polireplay.it">info@polireplay.it</a></p>
+                    <h1>PoliReplay ❤️ Open-Source</h1>
+                    <p>Da oggi PoliReplay è open-source! Visita la nostra repo su <strong>GitHub</strong> per contribuire allo sviluppo: <a href="https://github.com/NiccoloSegato/polireplay" target="_blank">https://github.com/NiccoloSegato/polireplay</a></p>
                 </div>
             </div>
             <div id="news" class="subdiv">
@@ -196,18 +202,11 @@ $result2 = mysqli_query($conn, $query2);
                     <p>Non trovi una lezione del tuo corso di studi? Unisciti al nostro team di creators e comincia ad aggiungere lezioni su PoliReplay. Invia una email a <a title="info@polireplay.it" href="mailto:info@polireplay.it">info@polireplay.it</a> e verrai ricontattato 😉</p>
                 </div>
             </div>
-            <div id="news2" class="subdiv">
-                <img src="./assets/images/news.png" alt="Semplificare lo studio"/>
-                <div class="news-container">
-                    <h1>Dagli studenti, per gli studenti</h1>
-                    <p>PoliReplay è una piattaforma nata per aiutare gli studenti Politecnico di Milano. Il progetto, servito gratuitamente agli studenti, mira a semplificare e velocizzare il processo di studi.<br></br>Visita i nostri canali social <a title="PoliReplay su Instagram" href="https://www.instagram.com/polireplay">@polireplay</a> su Instagram e <a title="PoliReplay su Twitter" href="https://www.twitter.com/poli_replay">@poli_replay</a> su Twitter per rimanere sempre aggiornato!</p>
-                </div>
-            </div>
         </div>
 
         <!-- FOOTER -->
         <div id="footbar">
-            <p>© Copyright 2020 PoliReplay - All rights reserved -
+            <p>© Copyright 2021 PoliReplay - All rights reserved -
                 <a title="Privacy Policy" href="privacy.html" >Privacy Policy</a>
                 -
                 <a title="Termini e condizioni" href="termini.html">Termini e condizioni</a>
