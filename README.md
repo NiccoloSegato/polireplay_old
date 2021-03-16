@@ -21,4 +21,4 @@ PoliReplay is based on student contributions. So feel free to propose any code c
 📌**All changes must be requested on the development branch**📌
 
 ## Integrations with other services 🤖
-Integrations with external software are governed by the rules contained in the wiki ()
+Integrations with external software are governed by the rules contained in the wiki at [this page](https://github.com/NiccoloSegato/polireplay/wiki/Integration-with-third-parties-softwares)
