@@ -22,3 +22,6 @@ PoliReplay is based on student contributions. So feel free to propose any code c
 
 ## Integrations with other services 🤖
 Integrations with external software are governed by the rules contained in the wiki at [this page](https://github.com/NiccoloSegato/polireplay/wiki/Integration-with-third-parties-softwares)
+
+## Design guidelines ✏️
+You can find all the requirements and best practices for UI and UX at [this page](https://github.com/NiccoloSegato/polireplay/wiki/Design-guidelines)
